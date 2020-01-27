@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
-use \GuzzleHttp\Client;
-
+use Illuminate\Support\Facades\Log;
 
 class GnaviController extends Controller
 {
@@ -32,10 +30,10 @@ class GnaviController extends Controller
             //getBody(): コンテンツを取得する。
             // (string) キャストしている。
             $json = (string) $res->getBody();
-            \Log::info($json);
+            Log::info($json);
             return $json;
         } catch (\Exception $e) {
-            \Log::info($e);
+            Log::info($e);
             return view('welcome');
             //finallyの処理が優先されてしまう。
 //         } finally {

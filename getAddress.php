@@ -1,27 +1,27 @@
 <?php
-function getAddress($zipcode) {
+function getAddress($zipcode)
+{
+    $params = [
+        'zipcode' => $zipcode,
+    ];
 
-  $params = [
-    'zipcode' => $zipcode,
-  ];
+    $base_url = "https://zip-cloud.appspot.com/api/search?";
+    /**
+     * $base_urlにエンコードされたクエリを追加する。
+     */
 
-  $base_url = "https://zip-cloud.appspot.com/api/search?";
-  /**
-   * $base_urlにエンコードされたクエリを追加する。
-   */
+    $url = $base_url . http_build_query($params);
 
-  $url = $base_url . http_build_query($params);
+    echo $url . "\n";
+    $ch = curl_init();
 
-  echo $url . "\n";
-  $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
 
-  curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_HEADER, 0);
-
-  /**
-   * curl_exec: curlセッションを実行
-   */
-  curl_exec($ch);
+    /**
+     * curl_exec: curlセッションを実行
+     */
+    curl_exec($ch);
 }
 
 echo "郵便番号を入力してください。" . "\n";
@@ -42,8 +42,8 @@ $bool = preg_match($pattern, $zipcode);
  * 正規表現がtrueで文字列が7の時だけ住所を返す。
  */
 if ($bool === 1 && mb_strlen($zipcode) === 7) {
-  echo $zipcode . "\n";
-  getAddress($zipcode);
+    echo $zipcode . "\n";
+    getAddress($zipcode);
 } else {
-  echo "半角整数7文字で入力してください。";
+    echo "半角整数7文字で入力してください。";
 }
