@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a07de955-b988-4c60-8c83-dc0bcc3a36b2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ESL_kadai.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ESL_kadai.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GnaviController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GnaviController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +162,8 @@
       <option name="presentableId" value="Default" />
       <updated>1579693213677</updated>
       <workItem from="1579693215291" duration="70000" />
-      <workItem from="1579693309798" duration="19594000" />
+      <workItem from="1579693309798" duration="28186000" />
+      <workItem from="1579844643785" duration="9819000" />
     </task>
     <servers />
   </component>
@@ -174,14 +171,42 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="627" y="-922" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579769008406">
+    <state x="1302" y="-1036" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580087840583">
       <screen x="-660" y="-1692" width="3008" height="1692" />
     </state>
-    <state x="627" y="-922" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579769008406" />
-    <state x="509" y="-1298" width="670" height="676" key="search.everywhere.popup" timestamp="1579756252145">
+    <state x="1302" y="-1036" key="#com.intellij.fileTypes.FileTypeChooser/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1580087840583" />
+    <state width="1452" height="506" key="GridCell.Tab.0.bottom" timestamp="1579853203502">
       <screen x="-660" y="-1692" width="3008" height="1692" />
     </state>
-    <state x="509" y="-1298" width="670" height="676" key="search.everywhere.popup/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579756252145" />
+    <state width="1452" height="506" key="GridCell.Tab.0.bottom/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579853203502" />
+    <state width="1452" height="506" key="GridCell.Tab.0.center" timestamp="1579853203500">
+      <screen x="-660" y="-1692" width="3008" height="1692" />
+    </state>
+    <state width="1452" height="506" key="GridCell.Tab.0.center/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579853203500" />
+    <state width="1452" height="506" key="GridCell.Tab.0.left" timestamp="1579853203499">
+      <screen x="-660" y="-1692" width="3008" height="1692" />
+    </state>
+    <state width="1452" height="506" key="GridCell.Tab.0.left/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579853203499" />
+    <state width="1452" height="506" key="GridCell.Tab.0.right" timestamp="1579853203501">
+      <screen x="-660" y="-1692" width="3008" height="1692" />
+    </state>
+    <state width="1452" height="506" key="GridCell.Tab.0.right/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579853203501" />
+    <state x="1419" y="-916" key="NewPhpFileDialog" timestamp="1580087939822">
+      <screen x="-660" y="-1692" width="3008" height="1692" />
+    </state>
+    <state x="1419" y="-916" key="NewPhpFileDialog/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1580087939822" />
+    <state x="627" y="-922" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579845163713">
+      <screen x="-660" y="-1692" width="3008" height="1692" />
+    </state>
+    <state x="627" y="-922" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579845163712" />
+    <state x="1266" y="-437" key="run.anything.popup" timestamp="1579857720045">
+      <screen x="-660" y="-1692" width="3008" height="1692" />
+    </state>
+    <state x="1266" y="-437" key="run.anything.popup/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579857720045" />
+    <state x="509" y="-1298" width="670" height="676" key="search.everywhere.popup" timestamp="1579847354462">
+      <screen x="-660" y="-1692" width="3008" height="1692" />
+    </state>
+    <state x="509" y="-1298" width="670" height="676" key="search.everywhere.popup/-660.-1692.3008.1692/0.0.1792.1120@-660.-1692.3008.1692" timestamp="1579847354462" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
