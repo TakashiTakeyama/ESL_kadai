@@ -21,16 +21,6 @@ class GetAddress extends Command
     protected $description = '郵便番号を入力すると住所を取得できます。';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @return mixed
@@ -39,7 +29,7 @@ class GetAddress extends Command
     {
         echo "郵便番号を入力してください。" . "\n";
         /**
-         * 郵便番号を入力してintgerに変換
+         * 郵便番号を入力してintegerに変換
          */
         $zipcode = intval(fgets(STDIN));
 
@@ -59,9 +49,16 @@ class GetAddress extends Command
             return;
         }
 
-        $params = [
-            'zipcode' => $zipcode,
-        ];
+//        $params = [
+//            'zipcode' => $zipcode,
+//        ];
+
+        /**
+         * compact(): 変数名とその値から配列を作成する。
+         * 戻り値は　[zipcode] => *******;
+         */
+        $params = compact('zipcode');
+        print_r($params);
 
         $base_url = "https://zip-cloud.appspot.com/api/search?";
         /**
