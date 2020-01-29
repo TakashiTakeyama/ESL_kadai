@@ -2,34 +2,42 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use \GuzzleHttp\Client;
 
+use Illuminate\Support\Facades\Log;
 
 class GnaviController extends Controller
 {
     public function index()
     {
-//        $base_url = "https://api.gnavi.co.jp/RestSearchAPI/v3/";
-        $base_url = "https://qiita.com/busyoumono99/items/9b5ffd35dd521bafce47";
+        $base_url = "https://api.gnavi.co.jp/RestSearchAPI/v3/";
 
         $client = new \GuzzleHttp\Client();
 
         $res = $client->request('GET', $base_url, [
-//            'query' => ['keyid' => $_ENV['API_KEY'],
-//                'name' => "魚",
-//            ]
+            'query' => ['keyid' => $_ENV['API_KEY'],
+                'name' => "魚 うなぎ",
+            ]
         ]);
+
+        /**
+         * json形式でresponseを受け取るには？
+         * $array = $res->json();
+         * print_r($array);
+         */
 
         try {
             //assoc: true の場合返り値は連想配列になる。
-//            $json = json_decode($res->getBody(), true);
-//            return view('gnavi.index', $json);
-            var_dump($res) . "\n";
-//            var_dump($json) . "\n";
+            //getBody(): コンテンツを取得する。
+            // (string) キャストしている。
+            $json = (string) $res->getBody();
+            Log::info($json);
+            return $json;
         } catch (\Exception $e) {
-           return view('welcome');
-//            $e->getMessage();
+            Log::info($e);
+            return view('welcome');
+            //finallyの処理が優先されてしまう。
+//         } finally {
+//             return "取得しました。";
         }
     }
 }
