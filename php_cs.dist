@@ -1,0 +1,46 @@
+<?php
+/**
+ * Copyright © 2019 EUSTYLE LABORATORY - ALL RIGHTS RESERVED.
+ * UNAUTHORIZED COPYING OF THIS FILE, VIA ANY MEDIUM IS STRICTLY PROHIBITED PROPRIETARY AND CONFIDENTIAL.
+ */
+return \PhpCsFixer\Config::create()
+    ->setRiskyAllowed(true)
+    ->setRules(\Suin\PhpCsFixer\Rules::create([
+        'blank_line_before_statement' => false,
+        'cast_spaces' => [
+            'space' => 'none',
+        ],
+        'class_attributes_separation' => [
+            'elements' => ['method'],
+        ],
+        'native_function_invocation' => false,
+        'no_superfluous_phpdoc_tags' => false,
+        'no_useless_else' => false,
+        'ordered_class_elements' => [
+            'order' => [
+                'use_trait',
+                'constant_public',
+                'constant_protected',
+                'constant_private',
+                'property_public',
+                'property_protected',
+                'property_private',
+                'construct',
+                'destruct',
+                'phpunit',
+                'method_public',
+                'method_protected',
+                'method_private',
+                'magic',
+            ],
+        ],
+        'php_unit_method_casing' => false,
+        'phpdoc_no_empty_return' => false,
+        'phpdoc_separation' => false,
+        'phpdoc_to_comment' => false,
+        'self_accessor' => false,
+        'void_return' => false,
+    ]))
+    ->setFinder(
+        \PhpCsFixer\Finder::create()->exclude('vendor')->in(__DIR__)
+    );
