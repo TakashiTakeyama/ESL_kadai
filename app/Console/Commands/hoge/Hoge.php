@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands\hoge;
 
 use Illuminate\Console\Command;
@@ -37,6 +39,5 @@ class Hoge extends Command
      */
     public function handle()
     {
-        //
     }
 }
